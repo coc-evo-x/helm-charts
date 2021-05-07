@@ -3,7 +3,7 @@ name: Release Kube-Striker Chart
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   release:

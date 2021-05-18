@@ -14,5 +14,5 @@ spec:
       protocol: TCP
       name: {{ .Values.fe.service.portname }}
   selector:
-    app: {{ .Values.fe.component.appname }}}
+    app: {{ .Values.fe.component.appname }}
     component: {{ .Values.fe.component.name }}

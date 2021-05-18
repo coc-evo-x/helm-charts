@@ -20,6 +20,10 @@ spec:
         app: {{ .Values.global.appname }}
         component: {{ .Values.python.component.name }}
     spec:
+      {{ if .Values.python.server.image.pullSecretName }}
+      imagePullSecrets:
+        - name: {{ .Values.python.server.image.pullSecretName }}
+      {{ end }}
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -35,8 +39,9 @@ spec:
           emptyDir: {}
       containers:
         - name: {{ .Values.python.server.image.name }}
-          image: "{{ .Values.python.server.image.repository }}"
+          image: "{{ .Values.python.server.image.repository }}:{{ .Values.python.server.image.version }}"
           imagePullPolicy: {{ .Values.python.server.image.pullPolicy }}
+
           env:
             - name: ADVERTISE_IP
               valueFrom:

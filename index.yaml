@@ -3,6 +3,16 @@ entries:
   kubestriker:
   - apiVersion: v2
     appVersion: 0.0.2
+    created: "2021-06-14T14:27:46.223206351Z"
+    description: A Helm chart for Kube Striker - Checks Cluster Security Issues
+    digest: 4826dd52c9f77deaeeb8f7b4354840ec75dabf5ec443195162c069376ce7d5ce
+    name: kubestriker
+    type: application
+    urls:
+    - https://github.com/coc-evo-x/helm-charts/releases/download/kubestriker-0.0.4/kubestriker-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 0.0.2
     created: "2021-05-18T14:51:07.727533555Z"
     description: A Helm chart for Kube Striker - Checks Cluster Security Issues
     digest: 2087b9b9ee33d61e2c8a5b61229363f3a753454c7da40b12ce77c8fc34dc4577
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/coc-evo-x/helm-charts/releases/download/kubestriker-0.0.1/kubestriker-0.0.1.tgz
     version: 0.0.1
-generated: "2021-05-18T14:51:07.727548556Z"
+generated: "2021-06-14T14:27:46.223231554Z"

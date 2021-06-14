@@ -45,6 +45,7 @@ python:
     portname: python-svc
 
   server:
+    serviceAccountName: kube-striker
     name: kubestriker-python
     replicas: 1
     image:

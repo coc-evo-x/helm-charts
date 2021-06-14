@@ -24,6 +24,9 @@ spec:
       imagePullSecrets:
         - name: {{ .Values.python.server.image.pullSecretName }}
       {{ end }}
+      {{ if .Values.python.server.serviceAccountName }}
+      serviceAccountName: {{ .Values.python.server.serviceAccountName }}
+      {{ end }}
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
